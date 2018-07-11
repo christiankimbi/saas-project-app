@@ -1,6 +1,8 @@
 class Project < ApplicationRecord
   belongs_to :tenant
+  has_many :artifacts, dependent: :destroy
   validates_uniqueness_of :title
+
   validate :free_plan_can_only_have_one_project
 
 
