@@ -158,7 +158,7 @@
 
   font-weight: 700;
 
-  size: 120%;
+  font-size: 120%;
 
 }
 
@@ -176,3 +176,16 @@
 
 .no-left-padding{ padding-left: 0!important;}
 .no-right-padding{ padding-right: 0!important;}
+
+.table tr td {
+  a.main-link{
+    color: #428bca;
+  }
+
+  a.main-link:hover{
+    background: none;
+  }
+}
+.datepicker{
+  z-index: 9999!important;
+}
