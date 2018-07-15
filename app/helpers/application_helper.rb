@@ -9,8 +9,8 @@ module ApplicationHelper
 
       type = type.to_sym
       type = :success if type == :notice
-      type = :danger  if type == :alert
-      type = :danger  if type == :error
+      type = :danger if type == :alert
+      type = :danger if type == :error
       next unless ALERT_TYPES.include?(type)
 
       tag_class = options.extract!(:class)[:class]
@@ -33,8 +33,11 @@ module ApplicationHelper
   end
 
   def s3_link(tenant_id, artifact_key)
-    link_to artifact_key,"#{artifact_key}", class: "main-link", target: 'new'
+    link_to artifact_key, "#{artifact_key}", class: "main-link", target: 'new'
   end
 
+ def class_name_for_tenant_form(tenant)
+   return "cc_form" if tenant.payment.blank?
+ end
 
 end
